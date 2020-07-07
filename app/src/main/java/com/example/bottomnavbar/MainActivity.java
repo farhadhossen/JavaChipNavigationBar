@@ -17,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
     FragmentManager fragmentManager;
 
 
+
+    private String myString = "hello";
+    private String myString2 = "hello2";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
 
         fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit();
+
+
+
+
 
 
 
@@ -69,5 +77,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    public String getMyData() {
+        return myString;
+    }
+    public String getMyDataa() {
+        return myString2;
     }
 }
