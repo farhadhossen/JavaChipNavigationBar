@@ -24,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNav = findViewById(R.id.bottom_nav);
 
+        Fragment fragment = new HomeFragment();
+
+        fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit();
+
+
+
         BottomNav.setOnItemSelectedListener(new ChipNavigationBar.OnItemSelectedListener() {
             @Override
             public void onItemSelected(int id) {
